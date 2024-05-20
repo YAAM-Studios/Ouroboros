@@ -122,6 +122,56 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &131242423
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 131242424}
+  - component: {fileID: 131242425}
+  m_Layer: 0
+  m_Name: Camera Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &131242424
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131242423}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1805589707}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &131242425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131242423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 694d493753f45bf4f91f3d7cfe82388f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eniaVirtualCamera: {fileID: 1068185298}
+  hyettaVirtualCamera: {fileID: 1700581579}
+  orthoSize: 15
+  nearClippingPlane: 0
+  farClippingPlane: 1000
+  trackedObjectOffset: {x: 0, y: 0.67, z: 0}
 --- !u!1 &307047818
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,8 +199,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307047818}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.16042995, y: 0.37686962, z: -0.06645226, w: 0.9098438}
-  m_LocalPosition: {x: -29.738525, y: 14.350805, z: -26.578522}
+  m_LocalRotation: {x: -0, y: -0.38268343, z: -0, w: 0.92387956}
+  m_LocalPosition: {x: 11.131067, y: 0, z: -7.071068}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -195,7 +245,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0
+  near clip plane: 0.3
   far clip plane: 1000
   field of view: 60.000004
   orthographic: 1
@@ -501,7 +551,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0
+  near clip plane: 0.3
   far clip plane: 1000
   field of view: 60.000004
   orthographic: 1
@@ -529,8 +579,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 877947315}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.16042995, y: 0.37686962, z: -0.06645226, w: 0.9098438}
-  m_LocalPosition: {x: -29.738525, y: 14.350805, z: -26.578522}
+  m_LocalRotation: {x: -0, y: -0.38268343, z: -0, w: 0.92387956}
+  m_LocalPosition: {x: 11.131067, y: 0, z: -7.071068}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -610,11 +660,11 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 7395875258733091034}
+  m_LookAt: {fileID: 0}
   m_Follow: {fileID: 7395875258733091034}
   m_Lens:
     FieldOfView: 60.000004
-    OrthographicSize: 5
+    OrthographicSize: 10
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -949,6 +999,57 @@ Transform:
   - {fileID: 762935199}
   m_Father: {fileID: 1865309112}
   m_LocalEulerAnglesHint: {x: 20, y: 45, z: 0}
+--- !u!1 &1805589705
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1805589707}
+  - component: {fileID: 1805589706}
+  m_Layer: 0
+  m_Name: ------CONTROLLERS------
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1805589706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805589705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 694d493753f45bf4f91f3d7cfe82388f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eniaVirtualCamera: {fileID: 0}
+  hyettaVirtualCamera: {fileID: 0}
+  orthoSize: 10
+  nearClippingPlane: 0
+  farClippingPlane: 0
+  trackedObjectOffset: {x: 0, y: 0.67, z: 0}
+--- !u!4 &1805589707
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805589705}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 131242424}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1865309111
 GameObject:
   m_ObjectHideFlags: 0
@@ -1035,10 +1136,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enia
       objectReference: {fileID: 0}
-    - target: {fileID: 7316541891246263587, guid: 12d7ddf45fbbc00458d1add8da14f6e7, type: 3}
-      propertyPath: moveSpeed
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1052,10 +1149,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1865309112}
     m_Modifications:
-    - target: {fileID: 3534986013564916422, guid: 20b8f6419fa0b87419e53696ad79f5f1, type: 3}
-      propertyPath: moveSpeed
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 5577368167460766780, guid: 20b8f6419fa0b87419e53696ad79f5f1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.16
@@ -1100,10 +1193,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hyetta
       objectReference: {fileID: 0}
-    - target: {fileID: 6327777875513747405, guid: 20b8f6419fa0b87419e53696ad79f5f1, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1120,5 +1209,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 1302014997}
   - {fileID: 568279413}
+  - {fileID: 1805589707}
   - {fileID: 1450606848}
   - {fileID: 1865309112}

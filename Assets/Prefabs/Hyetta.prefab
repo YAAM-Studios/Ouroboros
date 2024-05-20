@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 5577368167460766780}
   - component: {fileID: 202887920796741157}
   - component: {fileID: 5441811018298031330}
-  - component: {fileID: 885629904852405150}
   - component: {fileID: 3534986013564916422}
+  - component: {fileID: 885629904852405150}
   - component: {fileID: 6819921339826240470}
   - component: {fileID: 6489492227608333080}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hyetta
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -87,6 +87,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3534986013564916422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6327777875513747405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cbc63dc690e2e84e85dacc2f7f43d61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isKeyboardControlled: 0
+  moveSpeed: 10
+  moveSpeedOffset: 0
+  movementEnabled: 1
 --- !u!136 &885629904852405150
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -110,22 +126,6 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3534986013564916422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6327777875513747405}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cbc63dc690e2e84e85dacc2f7f43d61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isKeyboardControlled: 0
-  moveSpeed: 3.25
-  moveSpeedOffset: 0
-  movementEnabled: 1
 --- !u!114 &6819921339826240470
 MonoBehaviour:
   m_ObjectHideFlags: 0
