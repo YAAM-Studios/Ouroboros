@@ -13,6 +13,8 @@ public class CameraController : MonoBehaviour
     public float farClippingPlane = 1000f;
 
     public Vector3 trackedObjectOffset = new (0f, 0.67f, 0f);
+
+    public float cameraDistance = 40f;
     
     // Start is called before the first frame update
     void Start()
@@ -29,5 +31,6 @@ public class CameraController : MonoBehaviour
         camera.m_Lens.FarClipPlane = farClippingPlane;
         var transposer = camera.AddCinemachineComponent<CinemachineFramingTransposer>();
         transposer.m_TrackedObjectOffset = trackedObjectOffset;
+        transposer.m_CameraDistance = cameraDistance;
     }
 }
