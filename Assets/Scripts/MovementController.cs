@@ -53,7 +53,7 @@ public class MovementController : MonoBehaviour
             // Translate the character in the move direction with the magnitude of designer-controlled move speed + move speed offset (from other scripts)
             // Move speed / 3 was calculated from:
             // ( default speed we wanted to start with (10) divided by factor that gets us to the Unity Engine force we want (3) )
-            _rb.AddForce(moveDirection * (moveSpeed / 3 + moveSpeedOffset), ForceMode.VelocityChange);
+            _rb.AddForce(transform.InverseTransformDirection(moveDirection) * (moveSpeed / 3 + moveSpeedOffset), ForceMode.VelocityChange);
         }
     }
 }
