@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8963355026427138182}
   - component: {fileID: 8938482207267376421}
   m_Layer: 0
-  m_Name: Enia Health
+  m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49,25 +49,70 @@ MonoBehaviour:
   startingVulnerableState: 0
   deathEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1919899004917326247}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   damageEvent:
     m_PersistentCalls:
       m_Calls: []
   healEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &1746823332495925926
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7887775169172300391}
+  - component: {fileID: 6185564160241552474}
+  m_Layer: 0
+  m_Name: Stamina
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7887775169172300391
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746823332495925926}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 115038183332377412}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6185564160241552474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746823332495925926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 881878382910b054a8274a08c7c860ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxStamina: 100
+  baseStamina: 100
+  baseAddableState: 0
+  staminaDepletedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  staminaGainEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  staminaLossEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  currentStamina: 0
 --- !u!1 &1919899004917326247
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,6 +149,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8963355026427138182}
+  - {fileID: 7887775169172300391}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8752324799886992280
